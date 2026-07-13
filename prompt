@@ -1,0 +1,80 @@
+import { MessageSquare, Shield, Heart, BookOpen } from 'lucide-react';
+
+export default function Home() {
+  return (
+    <section id="home" className="pt-16">
+      <div className="bg-gradient-to-br from-blue-50 to-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Welcome to <span className="text-blue-600">HealthAI Chat</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Empowering You with Health Awareness — One Chat at a Time
+            </p>
+            <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
+              Learn about diseases, symptoms, prevention methods, and health tips through our interactive AI chatbot.
+              Get accurate, verified, and easy-to-understand health information instantly.
+            </p>
+            <a
+              href="#chatbot"
+              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-200 transform hover:scale-105"
+            >
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Chat Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Why Choose HealthAI Chat?
+          </h2>
+          <p className="text-lg text-gray-600">
+            Your trusted companion for health education and disease awareness
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-200">
+            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <Shield className="h-8 w-8 text-blue-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Accurate Information
+            </h3>
+            <p className="text-gray-600">
+              All information is verified and based on trusted medical sources and health organizations.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-200">
+            <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <Heart className="h-8 w-8 text-green-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Easy to Understand
+            </h3>
+            <p className="text-gray-600">
+              Complex medical information simplified into easy-to-understand language for everyone.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-200">
+            <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <BookOpen className="h-8 w-8 text-teal-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              24/7 Available
+            </h3>
+            <p className="text-gray-600">
+              Access health information anytime, anywhere with our AI-powered chatbot interface.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

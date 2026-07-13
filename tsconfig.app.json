@@ -1,0 +1,222 @@
+import { Calendar, User, ArrowRight, Leaf, Apple, Dumbbell, Moon, Droplet, Sun } from 'lucide-react';
+
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  icon: any;
+  color: string;
+  tips: string[];
+}
+
+export default function Blog() {
+  const posts: BlogPost[] = [
+    {
+      id: '1',
+      title: '10 Daily Habits for Better Health',
+      excerpt: 'Simple lifestyle changes that can significantly improve your overall wellbeing and prevent diseases.',
+      author: 'Health Team',
+      date: 'March 15, 2024',
+      icon: Sun,
+      color: 'text-yellow-600',
+      tips: [
+        'Drink 8 glasses of water daily to stay hydrated',
+        'Get 7-8 hours of quality sleep each night',
+        'Exercise for at least 30 minutes daily',
+        'Eat a balanced diet with plenty of fruits and vegetables',
+        'Practice stress management through meditation or yoga',
+      ],
+    },
+    {
+      id: '2',
+      title: 'Nutrition Guide: Eating for Immunity',
+      excerpt: 'Discover foods that strengthen your immune system and help your body fight infections naturally.',
+      author: 'Health Team',
+      date: 'March 10, 2024',
+      icon: Apple,
+      color: 'text-red-600',
+      tips: [
+        'Include citrus fruits rich in Vitamin C',
+        'Consume leafy greens like spinach and kale',
+        'Add nuts and seeds for essential minerals',
+        'Eat probiotic-rich foods like yogurt',
+        'Include garlic and ginger in your meals',
+      ],
+    },
+    {
+      id: '3',
+      title: 'Exercise Basics for Beginners',
+      excerpt: 'Start your fitness journey with these beginner-friendly exercises to build strength and endurance.',
+      author: 'Health Team',
+      date: 'March 5, 2024',
+      icon: Dumbbell,
+      color: 'text-blue-600',
+      tips: [
+        'Start with 15-20 minutes of walking daily',
+        'Do simple stretching exercises every morning',
+        'Try bodyweight exercises like squats and push-ups',
+        'Gradually increase intensity over time',
+        'Always warm up before and cool down after exercise',
+      ],
+    },
+    {
+      id: '4',
+      title: 'Mental Health Matters',
+      excerpt: 'Understanding the importance of mental wellbeing and practical tips for maintaining emotional health.',
+      author: 'Health Team',
+      date: 'February 28, 2024',
+      icon: Moon,
+      color: 'text-indigo-600',
+      tips: [
+        'Practice mindfulness and meditation daily',
+        'Maintain social connections with friends and family',
+        'Set boundaries and learn to say no',
+        'Seek professional help when needed',
+        'Engage in hobbies and activities you enjoy',
+      ],
+    },
+    {
+      id: '5',
+      title: 'Hydration: The Foundation of Health',
+      excerpt: 'Learn why proper hydration is crucial for your body and how to maintain optimal water intake.',
+      author: 'Health Team',
+      date: 'February 20, 2024',
+      icon: Droplet,
+      color: 'text-cyan-600',
+      tips: [
+        'Drink water first thing in the morning',
+        'Carry a reusable water bottle everywhere',
+        'Eat water-rich foods like cucumbers and watermelon',
+        'Set reminders to drink water throughout the day',
+        'Increase intake during exercise and hot weather',
+      ],
+    },
+    {
+      id: '6',
+      title: 'Natural Ways to Boost Energy',
+      excerpt: 'Discover natural methods to increase your energy levels without relying on caffeine or supplements.',
+      author: 'Health Team',
+      date: 'February 15, 2024',
+      icon: Leaf,
+      color: 'text-green-600',
+      tips: [
+        'Maintain regular sleep schedule',
+        'Take short breaks during work',
+        'Get exposure to natural sunlight',
+        'Reduce sugar and processed food intake',
+        'Stay physically active throughout the day',
+      ],
+    },
+  ];
+
+  return (
+    <section id="blog" className="py-20 bg-gradient-to-br from-blue-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Health Tips & Blog</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Daily health tips, wellness advice, and informative articles to help you live a healthier life
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => {
+            const Icon = post.icon;
+            return (
+              <div
+                key={post.id}
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-200 overflow-hidden group"
+              >
+                <div className="bg-gradient-to-br from-blue-50 to-white p-6 flex items-center justify-center border-b">
+                  <Icon className={`h-16 w-16 ${post.color}`} />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-sm">{post.excerpt}</p>
+
+                  <div className="space-y-2 mb-4">
+                    <h4 className="font-semibold text-gray-900 text-sm">Key Tips:</h4>
+                    <ul className="space-y-1">
+                      {post.tips.slice(0, 3).map((tip, index) => (
+                        <li key={index} className="text-gray-700 text-sm flex items-start">
+                          <span className="text-green-600 mr-2">✓</span>
+                          <span className="line-clamp-1">{tip}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center space-x-1">
+                      <User className="h-4 w-4" />
+                      <span>{post.author}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Calendar className="h-4 w-4" />
+                      <span>{post.date}</span>
+                    </div>
+                  </div>
+
+                  <button className="w-full bg-blue-50 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors duration-200 flex items-center justify-center space-x-2 font-medium">
+                    <span>Read More</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16 bg-white rounded-xl shadow-md p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Quick Daily Health Tips</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-start space-x-3 p-4 bg-blue-50 rounded-lg">
+              <div className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold">1</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-1">Start Your Day Right</h4>
+                <p className="text-gray-700 text-sm">Drink a glass of water and do 5 minutes of stretching every morning.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-3 p-4 bg-green-50 rounded-lg">
+              <div className="flex-shrink-0 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold">2</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-1">Eat the Rainbow</h4>
+                <p className="text-gray-700 text-sm">Include colorful fruits and vegetables in every meal for maximum nutrition.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-3 p-4 bg-orange-50 rounded-lg">
+              <div className="flex-shrink-0 w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold">3</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-1">Move Every Hour</h4>
+                <p className="text-gray-700 text-sm">Take short walking breaks to improve circulation and reduce sitting time.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-3 p-4 bg-purple-50 rounded-lg">
+              <div className="flex-shrink-0 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold">4</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-1">Prioritize Sleep</h4>
+                <p className="text-gray-700 text-sm">Maintain consistent sleep schedule for better physical and mental health.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

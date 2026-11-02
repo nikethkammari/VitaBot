@@ -61,7 +61,7 @@ The HealthAI Chatbot uses a **rule-based keyword-matching mechanism** to process
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Category | Technology |
 |---|---|

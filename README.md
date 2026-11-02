@@ -9,7 +9,7 @@ The platform aims to make general health information easier to understand and ac
 
 ---
 
-## ✨ Features
+## Features
 
 - 🏠 **Home:** Landing page introducing the platform and its purpose.
 - ℹ️ **About:** Explains the platform's mission, objectives, and approach to health awareness.
@@ -21,7 +21,7 @@ The platform aims to make general health information easier to understand and ac
 
 ---
 
-## 🤖 Chatbot Functionality
+## Chatbot Functionality
 
 The HealthAI Chatbot uses a **rule-based keyword-matching mechanism** to process user messages and generate predefined responses.
 

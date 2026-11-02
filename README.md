@@ -1,73 +1,119 @@
-*HealthAI Chat*
+# 🩺 HealthAI Chat
+### Empowering You with Health Awareness — One Chat at a Time.
 
-Empowering You with Health Awareness — One Chat at a Time.
+HealthAI Chat is a responsive, single-page web application built using **React and TypeScript** that provides users with accessible health awareness and educational information through an interactive chatbot, disease reference guides, and wellness tips.
 
-HealthAI Chat is a single-page React + TypeScript web application that provides educational health information through an interactive chatbot, disease reference guides, and wellness tips. Built with Vite and styled using Tailwind CSS.
+The platform aims to make general health information easier to understand and access through a simple, user-friendly interface.
 
-⚠️ Disclaimer: HealthAI Chat is for educational purposes only and is not a medical diagnostic tool. Always consult qualified healthcare professionals for medical advice.
+> ⚠️ **Disclaimer:** HealthAI Chat is designed for educational and awareness purposes only. It is not a medical diagnostic tool and does not replace professional medical advice, diagnosis, or treatment.
 
+---
 
-*Features*:
+## ✨ Features
 
-🏠 Home — Landing section introducing the platform
-ℹ️ About — Mission, how the AI helps, and key goals
-🤖 Chatbot — Rule-based conversational assistant that answers questions about common diseases (malaria, dengue, diabetes, COVID-19, flu) and general health topics
-🦠 Diseases — Reference cards covering causes, symptoms, and prevention for common conditions (Malaria, Dengue, Diabetes, COVID-19, Influenza, Hypertension)
-📝 Health Tips / Blog — Articles and daily tips on nutrition, exercise, mental health, hydration, and energy
-📬 Contact — Feedback form for questions, suggestions, and issue reports
-📱 Fully responsive design with a mobile-friendly navigation menu
+- 🏠 **Home:** Landing page introducing the platform and its purpose.
+- ℹ️ **About:** Explains the platform's mission, objectives, and approach to health awareness.
+- 🤖 **Interactive Chatbot:** A rule-based conversational assistant that provides predefined educational responses to common health-related questions.
+- 🦠 **Disease Information:** Reference cards covering causes, symptoms, and prevention methods for common health conditions.
+- 📝 **Health Tips & Blog:** Informative articles and daily tips related to nutrition, physical activity, mental wellness, hydration, and healthy living.
+- 📬 **Contact:** Feedback form for questions, suggestions, and issue reports.
+- 📱 **Responsive Design:** Mobile-friendly interface with responsive navigation and layouts.
 
-*Tech Stack*:
+---
 
-Category - Technology
-Framework - React 18(TypeScript)
-Build Tool - Vite
-Styling - Tailwind CSS 
-Icons - lucide-react
-Linting - ESLint + typescript-eslint
+## 🤖 Chatbot Functionality
 
+The HealthAI Chatbot uses a **rule-based keyword-matching mechanism** to process user messages and generate predefined responses.
 
-*Project Structure*:
+### Supported Topics
 
+- Malaria
+- Dengue
+- Diabetes
+- COVID-19
+- Influenza (Flu)
+- General symptoms
+- Disease prevention
+- Health awareness
+- Greetings and basic conversations
+
+### How It Works
+
+1. The user enters a health-related question.
+2. The chatbot checks the message for predefined keywords.
+3. It identifies the matching topic.
+4. It displays a predefined educational response.
+
+**Note:** The chatbot does not use an external AI API or machine learning model. All responses are predefined and processed on the client side. Its answers are limited to the topics programmed into the application.
+
+---
+
+## 🦠 Disease Reference Guide
+
+| Disease | Information Covered |
+|---|---|
+| Malaria | Causes, symptoms, and prevention |
+| Dengue | Causes, symptoms, and prevention |
+| Diabetes | Types, symptoms, and management awareness |
+| COVID-19 | Symptoms and preventive measures |
+| Influenza | Common symptoms and prevention |
+| Hypertension | Risk factors and health awareness |
+
+---
+
+## 🛠️ Technology Stack
+
+| Category | Technology |
+|---|---|
+| Frontend Framework | React 18 |
+| Programming Language | TypeScript |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| Icons | Lucide React |
+| Code Quality | ESLint |
+| Type Checking | TypeScript ESLint |
+
+---
+
+## 📂 Project Structure
+
+```text
+HealthAI-Chat/
+│
+├── public/
+│   └── (Static assets and public files)
+│
 ├── src/
+│   │
+│   ├── assets/
+│   │   └── (Images, illustrations, and other assets)
+│   │
 │   ├── components/
-│   │   ├── Header.tsx        # Top navigation bar
-│   │   └── Footer.tsx        # Footer with links & disclaimer
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   │
 │   ├── pages/
 │   │   ├── Home.tsx
 │   │   ├── About.tsx
-│   │   ├── Chatbot.tsx       # Interactive health chatbot
-│   │   ├── Diseases.tsx      # Disease reference cards
-│   │   ├── Blog.tsx          # Health tips & articles
-│   │   └── Contact.tsx       # Contact / feedback form
-│   ├── App.tsx                # Root component composing all sections
-│   ├── main.tsx                # App entry point
-│   ├── index.css               # Tailwind directives & global styles
+│   │   ├── Chatbot.tsx
+│   │   ├── Diseases.tsx
+│   │   ├── Blog.tsx
+│   │   └── Contact.tsx
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
 │   └── vite-env.d.ts
+│
 ├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── tailwind.config.js
 ├── tsconfig.json
 ├── tsconfig.app.json
 ├── tsconfig.node.json
 ├── vite.config.ts
-└── package.json
-
-
-*Chatbot Behavior :*
-The chatbot (Chatbot.tsx) is a simple keyword-matching assistant — no external AI API is called. It matches user input against keywords (e.g. malaria, dengue, diabetes, covid, flu, symptom, prevention, greetings, and thanks) and returns a pre-written, educational response. This makes it lightweight and fully client-side, but it means responses are limited to the topics explicitly programmed in.
-
-*Contributing :*
-
-
-Fork the repository
-Create a feature branch (git checkout -b feature/my-feature)
-Commit your changes
-Open a pull request
-
-
-*License :*
-
-Add your preferred license here (e.g. MIT).
-
-*Disclaimer:*
-
-This project and its chatbot provide general educational health information only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions regarding a medical condition. For medical emergencies, contact your local emergency services immediately.
+│
+└── README.md

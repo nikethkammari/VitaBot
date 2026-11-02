@@ -11,13 +11,13 @@ The platform aims to make general health information easier to understand and ac
 
 ## Features
 
-- 🏠 **Home:** Landing page introducing the platform and its purpose.
-- ℹ️ **About:** Explains the platform's mission, objectives, and approach to health awareness.
-- 🤖 **Interactive Chatbot:** A rule-based conversational assistant that provides predefined educational responses to common health-related questions.
-- 🦠 **Disease Information:** Reference cards covering causes, symptoms, and prevention methods for common health conditions.
-- 📝 **Health Tips & Blog:** Informative articles and daily tips related to nutrition, physical activity, mental wellness, hydration, and healthy living.
-- 📬 **Contact:** Feedback form for questions, suggestions, and issue reports.
-- 📱 **Responsive Design:** Mobile-friendly interface with responsive navigation and layouts.
+-  **Home:** Landing page introducing the platform and its purpose.
+-  **About:** Explains the platform's mission, objectives, and approach to health awareness.
+-  **Interactive Chatbot:** A rule-based conversational assistant that provides predefined educational responses to common health-related questions.
+-  **Disease Information:** Reference cards covering causes, symptoms, and prevention methods for common health conditions.
+-  **Health Tips & Blog:** Informative articles and daily tips related to nutrition, physical activity, mental wellness, hydration, and healthy living.
+-  **Contact:** Feedback form for questions, suggestions, and issue reports.
+-  **Responsive Design:** Mobile-friendly interface with responsive navigation and layouts.
 
 ---
 
@@ -48,7 +48,7 @@ The HealthAI Chatbot uses a **rule-based keyword-matching mechanism** to process
 
 ---
 
-## 🦠 Disease Reference Guide
+## Disease Reference Guide
 
 | Disease | Information Covered |
 |---|---|

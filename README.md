@@ -1,4 +1,4 @@
-# 🩺 VitaBot
+# VitaBot
 ### For Your Health Awareness
 
 VitaBot is a responsive, single-page web application built using **React and TypeScript** that provides users with accessible health awareness and educational information through an interactive chatbot, disease reference guides, and wellness tips.
